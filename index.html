@@ -9,19 +9,27 @@
   
 <body style="margin:0px; padding:0px"> 
   
-  <div class="div1" id="div1"></div>
-  <video width="" height="" id="video1"
-    controls> 
-    <source src="" 
-      type=""> 
-  </video>
+  <div class="div1" id="div1">
+    <video width="" height="" id="video1"
+      controls> 
+      <source src="" 
+        type=""> 
+    </video>
+  </div> 
   
-  <script>
+  <div class="div2" id="div2"></div>
+  
+  <script> 
     
+    var front = false; 
+    document.getElementById('flip-button').onclick = function() { front = !front; }; 
+    // var constraints = { video: { facingMode: (front? "user" : "environment") } };
+
     // Prefer camera resolution nearest to 1280x720. 
     var constraints = { audio: true, 
                         video: { width: 1080, height: 720 },
-                                frameRate: { ideal: 10, max: 15 } 
+                        frameRate: { ideal: 10, max: 15 }, 
+                        facingMode: {(front? "user" : "environment")} 
                       }; 
     
     navigator.mediaDevices.getUserMedia(constraints) 
