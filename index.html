@@ -30,8 +30,8 @@
     // Prefer camera resolution nearest to 1280x720. 
     var constraints = { audio: true, 
                         video: { width: 1080, height: 720 },
-                        frameRate: { ideal: 10, max: 15 }, 
-                        facingMode: ( front? "user" : "environment" ) 
+                        frameRate: { ideal: 10, max: 15 } 
+                        // facingMode: ( front? "user" : "environment" ) 
                       }; 
     
     navigator.mediaDevices.getUserMedia(constraints) 
