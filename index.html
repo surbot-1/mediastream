@@ -43,8 +43,8 @@
     }) 
       .catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
 
-    document.getElementById('flip-button').onclick = function() { front = !front; }; 
-    constraints = { video: { facingMode: (front? "user" : "environment") } };
+    document.getElementById('flip-button').onclick = function() { front = !front; // }; 
+    constraints = { video: { facingMode: (front? "user" : "environment") } }; }; 
 
     
   </script>
