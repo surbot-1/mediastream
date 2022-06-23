@@ -19,7 +19,10 @@
   <script>
     
     // Prefer camera resolution nearest to 1280x720. 
-    var constraints = { audio: true, video: { width: 1080, height: 720 } }; 
+    var constraints = { audio: true, 
+                        video: { width: 1080, height: 720 },
+                                frameRate: { ideal: 10, max: 15 } 
+                      }; 
     
     navigator.mediaDevices.getUserMedia(constraints) 
       .then(function(mediaStream) { 
