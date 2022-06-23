@@ -7,8 +7,9 @@
  <title>editApp</title> 
 </head> 
   
-<body> 
+<body style="margin:0px; padding:0px"> 
   
+  <div class="div1" id="div1"></div>
   <video width="" height="" id="video1"
     controls> 
     <source src="" 
@@ -18,7 +19,7 @@
   <script>
     
     // Prefer camera resolution nearest to 1280x720. 
-    var constraints = { audio: true, video: { width: 1280, height: 720 } }; 
+    var constraints = { audio: true, video: { width: 1080, height: 720 } }; 
     
     navigator.mediaDevices.getUserMedia(constraints) 
       .then(function(mediaStream) { 
