@@ -24,9 +24,7 @@
   <script> 
     
     var front = true; 
-    document.getElementById('flip-button').onclick = function() { front = !front; }; 
-    // var constraints = { video: { facingMode: (front? "user" : "environment") } };
-
+    
     // Prefer camera resolution nearest to 1280x720. 
     var constraints = { audio: true, 
                         video: { width: 1080, height: 720, 
@@ -44,6 +42,9 @@
       }; 
     }) 
       .catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+
+    document.getElementById('flip-button').onclick = function() { front = !front; }; 
+    // var constraints = { video: { facingMode: (front? "user" : "environment") } };
 
     
   </script>
