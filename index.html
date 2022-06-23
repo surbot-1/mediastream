@@ -31,7 +31,7 @@
     var constraints = { audio: true, 
                         video: { width: 1080, height: 720 },
                         frameRate: { ideal: 10, max: 15 }, 
-                        facingMode: {(front? "user" : "environment")} 
+                        facingMode: ( front? "user" : "environment" ) 
                       }; 
     
     navigator.mediaDevices.getUserMedia(constraints) 
